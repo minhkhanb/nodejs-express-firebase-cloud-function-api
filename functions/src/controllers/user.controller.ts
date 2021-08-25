@@ -2,7 +2,8 @@ import { Request, Response } from 'express';
 import { createUser, remove, update } from '../services';
 
 export async function createNewUser(req: Request, res: Response): Promise<void> {
-  const user = await createUser();
+  const userInput = req.body;
+  const user = await createUser(userInput);
   res.status(200).send(user);
 }
 

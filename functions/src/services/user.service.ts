@@ -3,10 +3,10 @@ import { User } from '../models/user.model';
 
 const userRepository = getRepository(User);
 
-export async function createUser(): Promise<User> {
+export async function createUser(userInput: User): Promise<User> {
   const user = new User();
-  user.firstName = 'Kha';
-  user.lastName = 'Le';
+  user.firstName = userInput.firstName;
+  user.lastName = userInput.lastName;
   user.done = false;
 
   return await userRepository.create(user);
