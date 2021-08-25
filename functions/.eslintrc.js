@@ -31,5 +31,6 @@ module.exports = {
     'max-len': ['error', 100],
     'new-cap': 'off',
     'object-curly-spacing': [2, 'always'],
+    'require-jsdoc': 'off',
   },
 };
