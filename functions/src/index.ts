@@ -4,14 +4,8 @@ import * as cors from 'cors';
 import * as functions from 'firebase-functions';
 
 // The Firebase Admin SDK to access Firestore.
-import * as admin from 'firebase-admin';
-import * as fireorm from 'fireorm';
 
 import * as routes from './routes';
-
-admin.initializeApp();
-const firestore = admin.firestore();
-fireorm.initialize(firestore);
 
 const app = express();
 

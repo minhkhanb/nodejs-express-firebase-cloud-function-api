@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { createUser, update, remove } from '../services/user.service';
+import { createUser, remove, update } from '../services';
 
 export async function createNewUser(req: Request, res: Response): Promise<void> {
   const user = await createUser();
